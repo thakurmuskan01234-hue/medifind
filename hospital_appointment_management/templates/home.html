@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Home | MediCare Hospital{% endblock %}
+{% block content %}
+<section class="hero py-5">
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <span class="badge bg-light text-primary mb-3">ONLINE APPOINTMENT SYSTEM</span>
+        <h1 class="display-4 fw-bold">Quality healthcare, <span class="text-primary">simplified.</span></h1>
+        <p class="lead text-muted my-4">Find the right doctor, choose an available time slot, and manage your hospital appointments online.</p>
+        <a href="{% url 'doctors' %}" class="btn btn-primary btn-lg me-2">Find a Doctor</a>
+        <a href="{% url 'register' %}" class="btn btn-outline-primary btn-lg">Create Account</a>
+      </div>
+      <div class="col-lg-5 text-center">
+        <div class="medical-card">
+          <div class="display-1">🩺</div>
+          <h3>Healthcare at your fingertips</h3>
+          <p class="text-muted mb-0">Fast, convenient and organized appointment management.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container py-5">
+  <div class="row g-4 text-center">
+    <div class="col-md-4"><div class="stat-card"><h2>{{ doctor_count }}</h2><p>Doctors</p></div></div>
+    <div class="col-md-4"><div class="stat-card"><h2>{{ department_count }}</h2><p>Departments</p></div></div>
+    <div class="col-md-4"><div class="stat-card"><h2>{{ appointment_count }}</h2><p>Appointments</p></div></div>
+  </div>
+  <h2 class="text-center mt-5 mb-4">Why use MediCare?</h2>
+  <div class="row g-4">
+    <div class="col-md-4"><div class="feature-card"><h4>🔎 Easy Search</h4><p>Find doctors by department and specialization.</p></div></div>
+    <div class="col-md-4"><div class="feature-card"><h4>📅 Simple Booking</h4><p>Book appointments with convenient date and time selection.</p></div></div>
+    <div class="col-md-4"><div class="feature-card"><h4>📋 Track Status</h4><p>View upcoming and previous appointment information.</p></div></div>
+  </div>
+</div>
+{% endblock %}

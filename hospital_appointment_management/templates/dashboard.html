@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="container py-5">
+<div class="d-flex justify-content-between align-items-center mb-4"><div><h2 class="fw-bold">Hello, {{ patient.name }} 👋</h2><p class="text-muted">Manage your healthcare appointments.</p></div><a href="{% url 'book' %}" class="btn btn-primary">+ Book Appointment</a></div>
+<div class="row g-4">
+<div class="col-lg-4"><div class="feature-card"><h5>Patient Profile</h5><p class="mb-1"><b>Name:</b> {{ patient.name }}</p><p class="mb-1"><b>Email:</b> {{ patient.email }}</p><p class="mb-0"><b>Phone:</b> {{ patient.phone|default:"Not added" }}</p></div></div>
+<div class="col-lg-8"><div class="feature-card"><h5>Recent Appointments</h5>
+{% for a in appointments %}
+<div class="border-bottom py-3"><b>Dr. {{ a.doctor.name }}</b> — {{ a.appointment_date }} at {{ a.appointment_time }} <span class="badge float-end bg-secondary">{{ a.status }}</span></div>
+{% empty %}<p class="text-muted">No appointments yet.</p>{% endfor %}
+</div></div></div>
+</div>
+{% endblock %}

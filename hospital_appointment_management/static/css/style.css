@@ -1,0 +1,11 @@
+body { background: #f7faff; color: #1f2937; }
+.hero { background: linear-gradient(135deg, #eef6ff, #ffffff); }
+.medical-card { background: #fff; border-radius: 24px; padding: 50px 30px; box-shadow: 0 15px 45px rgba(0,80,160,.10); }
+.stat-card, .feature-card, .doctor-card, .form-card { background: #fff; border-radius: 18px; padding: 25px; box-shadow: 0 8px 25px rgba(0,0,0,.06); }
+.stat-card h2 { color: #0d6efd; font-weight: 700; }
+.doctor-card { transition: .2s; }
+.doctor-card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(0,0,0,.10); }
+.doctor-icon { font-size: 55px; }
+.form-card { max-width: 620px; }
+.form-control, .form-select { padding: 11px 14px; }
+footer { margin-top: 80px; }
